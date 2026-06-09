@@ -1,65 +1,147 @@
-/* 1. CSS Variables — your color palette */
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Variables ── */
 :root {
-  --bg: #0a1628;        /* dark navy background */
-  --accent: #c8a96e;   /* gold highlight color */
-  --text: #ccd6f6;      /* light text */
-  --muted: #8892b0;     /* dim text */
+  --bg:      #0a1628;
+  --bg2:     #112240;
+  --bg3:     #0d1f3c;
+  --accent:  #c8a96e;
+  --accent2: #e8c98e;
+  --text:    #ccd6f6;
+  --muted:   #8892b0;
+  --white:   #e6f1ff;
+  --border:  rgba(200,169,110,0.18);
 }
 
-/* 2. Reset — removes browser default spacing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-/* 3. Body — base font and background */
+/* ── Base ── */
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* 4. Navbar — fixed at top */
-nav {
+/* ── NAVBAR ── */
+#navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 8%;
   background: rgba(10,22,40,0.95);
-  z-index: 100;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
 }
-
-/* 5. Hero section */
-#hero {
-  min-height: 100vh;     /* full screen height */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 10%;
+  gap: 2rem;
+  list-style: none;
 }
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--accent); }
 
-/* 6. Section common style */
+/* ── SECTIONS ── */
 section {
   padding: 5rem 10%;
 }
-
-/* 7. Cards — for projects/skills */
-.card {
-  background: #112240;
-  border: 1px solid rgba(200,169,110,0.2);
-  border-radius: 6px;
-  padding: 1.5rem;
-  transition: transform 0.2s;
+section:nth-child(even) {
+  background: var(--bg3);
 }
-.card:hover {
-  transform: translateY(-4px);
+.section-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.section-line {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 3rem;
 }
 
-/* 8. Button style */
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 10% 4rem;
+}
+#hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+.bio {
+  max-width: 560px;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.hero-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.hero-links a:hover { color: var(--accent); }
+
+/* ── BUTTONS ── */
 .btn {
   display: inline-block;
   padding: 0.7rem 1.8rem;
@@ -67,8 +149,262 @@ section {
   color: var(--accent);
   text-decoration: none;
   border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: background 0.2s;
 }
-.btn:hover {
-  background: rgba(200,169,110,0.12);
+.btn:hover { background: rgba(200,169,110,0.1); }
+.btn-filled {
+  background: var(--accent);
+  color: var(--bg);
 }
+.btn-filled:hover { background: var(--accent2); }
+
+/* ── CARDS ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200,169,110,0.4);
+}
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* ── TAGS ── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.8rem;
+}
+.tag {
+  background: rgba(200,169,110,0.08);
+  border: 1px solid rgba(200,169,110,0.25);
+  color: var(--text);
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 0.82rem;
+}
+.tag.soft {
+  background: rgba(100,120,180,0.08);
+  border-color: rgba(100,120,180,0.25);
+  color: var(--muted);
+}
+
+/* ── ABOUT ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.stat-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+}
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── EDUCATION ── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.edu-card {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.edu-college {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+.edu-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ── EXPERIENCE ── */
+.exp-card {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.exp-header h3 {
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0;
+}
+.badge {
+  background: rgba(200,169,110,0.12);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 3px;
+}
+.exp-card ul {
+  padding-left: 1.2rem;
+}
+.exp-card ul li {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+.exp-card ul li::marker { color: var(--accent); }
+
+/* ── PROJECTS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+.project-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+.project-card h3 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+.project-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+/* ── CERTIFICATIONS ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.cert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.cert-icon { font-size: 1.5rem; flex-shrink: 0; }
+.cert-name {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+.cert-issuer {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ── CONTACT ── */
+.contact-intro {
+  color: var(--muted);
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 540px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 0.9rem 1.2rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+.contact-item:hover { border-color: var(--accent); }
+.contact-item span { font-size: 1.3rem; }
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+.contact-val {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  #navbar { padding: 1rem 5%; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.75rem; }
+  section { padding: 3.5rem 6%; }
+  .about-grid { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
+  #hero h1 { font-size: 2.4rem; }
+}
+
