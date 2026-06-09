@@ -1,44 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salome's | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salome Gulpage | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <!-- 1. Navigation Bar -->
+  <!-- NAVBAR -->
   <nav id="navbar">
     <a href="#hero" class="logo">SG.</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-   <!-- 2. Hero Section -->
+
+  <!-- HERO -->
   <section id="hero">
+    <span class="section-label">Hello, World —</span>
     <h1>Salome Gulpage</h1>
-    <p class="tagline">MCA Student & DevOps Fresher</p>
-    <p class="bio">MCA student and BCA graduate from Solapur with a strong foundation in Core Java, Python, HTML, MySQL, and DevOps. Hands-on experience building CI/CD pipelines and deploying applications on AWS. Seeking internship or entry-level opportunities to contribute and grow as an IT professional.</p>
-    <a href="#contact" class="btn">Get In Touch</a>
+    <p class="tagline">MCA Student &amp; DevOps Fresher</p>
+    <p class="bio">
+      MCA student and BCA graduate from Solapur with a strong foundation in Core Java, Python, HTML, MySQL, and DevOps.
+      Hands-on experience building CI/CD pipelines and deploying applications on AWS.
+      Seeking internship or entry-level opportunities to grow as an IT professional.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn btn-filled">Get In Touch</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/salome-gulpage" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/SalomeGulpage" target="_blank">🐙 GitHub</a>
+      <a href="mailto:salomegulpage@gmail.com">✉️ Email</a>
+    </div>
   </section>
 
-  <!-- 3. About, Skills, Education, Experience -->
-  <section id="about">...</section>
-  <section id="skills">...</section>
-  <section id="education">...</section>
-  <section id="projects">...</section>
-  <section id="contact">...</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <span class="section-label">01 — About</span>
+    <h2>Who I Am</h2>
+    <div class="section-line"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm Salome Gulpage, an MCA student from Solapur, Maharashtra. I hold a BCA degree (71.92%) and am currently pursuing my Master's in Computer Applications at DHB Soni College.</p>
+        <p>My academic journey combined with a DevOps internship at Vertex Technosys has given me practical experience with CI/CD automation, cloud deployment on AWS, containerization using Docker, and version control with Git.</p>
+        <p>I'm passionate about building efficient, automated systems and eager to contribute to real-world engineering teams.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Internship</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">71.9%</div>
+          <div class="stat-label">BCA Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Tech Skills</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- 4. Footer -->
+  <!-- SKILLS -->
+  <section id="skills">
+    <span class="section-label">02 — Skills</span>
+    <h2>Technical Expertise</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+
+      <div class="card">
+        <h3>💻 Programming Languages</h3>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">HTML</span>
+          <span class="tag">Basic MySQL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>☁️ DevOps &amp; Cloud</h3>
+        <div class="tags">
+          <span class="tag">AWS EC2</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">AWS IAM</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD Pipelines</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🔧 Automation &amp; IaC</h3>
+        <div class="tags">
+          <span class="tag">Ansible</span>
+          <span class="tag">Terraform (Basic)</span>
+          <span class="tag">Bash Scripting</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Tools &amp; Platforms</h3>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">SonarQube</span>
+          <span class="tag">Trivy</span>
+          <span class="tag">Nexus</span>
+          <span class="tag">Linux CLI</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🌟 Soft Skills</h3>
+        <div class="tags">
+          <span class="tag soft">Communication</span>
+          <span class="tag soft">Team Collaboration</span>
+          <span class="tag soft">Problem Solving</span>
+          <span class="tag soft">Time Management</span>
+          <span class="tag soft">Adaptability</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>💡 Concepts</h3>
+        <div class="tags">
+          <span class="tag">Version Control</span>
+          <span class="tag">Build Automation</span>
+          <span class="tag">Deployment</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Linux Networking</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <span class="section-label">03 — Education</span>
+    <h2>Academic Background</h2>
+    <div class="section-line"></div>
+    <div class="edu-grid">
+
+      <div class="card edu-card">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <p class="edu-college">DHB Soni College, Solapur</p>
+        <p class="edu-meta">Currently Pursuing | Maharashtra, India</p>
+      </div>
+
+      <div class="card edu-card">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p class="edu-college">K. P. Mangalvedhekar Institute, Solapur</p>
+        <p class="edu-meta">71.92% | Completed 2024</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <span class="section-label">04 — Experience</span>
+    <h2>Internship</h2>
+    <div class="section-line"></div>
+    <div class="card exp-card">
+      <div class="exp-header">
+        <div>
+          <h3>DevOps Intern</h3>
+          <p class="edu-college">Vertex Technosys (Gayatri Infotech)</p>
+        </div>
+        <span class="badge">Internship</span>
+      </div>
+      <ul>
+        <li>Gained hands-on experience with DevOps practices in a real-world environment</li>
+        <li>Built basic CI/CD pipelines using Jenkins for automated build and deployment</li>
+        <li>Created Docker containers and deployed applications on AWS EC2 instances</li>
+        <li>Used Git and GitHub for version control and team collaboration</li>
+        <li>Executed Linux commands and wrote basic Bash scripts for automation tasks</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <span class="section-label">05 — Projects</span>
+    <h2>Things I've Built</h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+
+      <div class="card project-card">
+        <div class="project-icon">📁</div>
+        <h3>Data Entry Form</h3>
+        <p>A GUI-based data entry application that collects and manages user information, validates input, and stores records automatically in an Excel file.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Tkinter</span>
+          <span class="tag">OpenPyXL</span>
+          <span class="tag">Excel</span>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-icon">✅</div>
+        <h3>To-Do List Management System</h3>
+        <p>Console-based task manager using OOP in C++. Supports adding, editing, deleting, and marking tasks complete via a menu-driven interface.</p>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Classes</span>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-icon">⚙️</div>
+        <h3>CI/CD Pipeline Automation</h3>
+        <p>Designed and implemented a complete CI/CD pipeline with Jenkins, SonarQube for code quality, Trivy for security scanning, and Nexus for artifact management.</p>
+        <div class="tags">
+          <span class="tag">Jenkins</span>
+          <span class="tag">SonarQube</span>
+          <span class="tag">Trivy</span>
+          <span class="tag">Nexus</span>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-icon">🍕</div>
+        <h3>Online Food Delivery Application</h3>
+        <p>Java-based application enabling menu browsing and order placement with basic backend integration for order management.</p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Backend</span>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-icon">🌤️</div>
+        <h3>Weather Forecast Application</h3>
+        <p>Python application using OpenWeatherMap API to display real-time weather data including temperature, humidity, pressure, and wind speed.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">REST API</span>
+          <span class="tag">OpenWeatherMap</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <span class="section-label">06 — Certifications</span>
+    <h2>Credentials</h2>
+    <div class="section-line"></div>
+    <div class="cert-grid">
+      <div class="card cert-card">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <p class="cert-name">DevOps Internship Certificate</p>
+          <p class="cert-issuer">Vertex Technosys / Gayatri Infotech</p>
+        </div>
+      </div>
+      <div class="card cert-card">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <p class="cert-name">AWS Cloud Fundamentals</p>
+          <p class="cert-issuer">Amazon Web Services</p>
+        </div>
+      </div>
+      <div class="card cert-card">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <p class="cert-name">Python Programming</p>
+          <p class="cert-issuer">Online Platform</p>
+        </div>
+      </div>
+      <div class="card cert-card">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <p class="cert-name">Core Java Development</p>
+          <p class="cert-issuer">Online Platform</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <span class="section-label">07 — Contact</span>
+    <h2>Let's Connect</h2>
+    <div class="section-line"></div>
+    <p class="contact-intro">I'm actively looking for internship or entry-level opportunities in DevOps or Software Development. Feel free to reach out!</p>
+    <div class="contact-links">
+      <a href="mailto:salomegulpage@gmail.com" class="contact-item">
+        <span>✉️</span>
+        <div>
+          <p class="contact-label">Email</p>
+          <p class="contact-val">salomegulpage@gmail.com</p>
+        </div>
+      </a>
+      <a href="tel:+919309270104" class="contact-item">
+        <span>📞</span>
+        <div>
+          <p class="contact-label">Phone</p>
+          <p class="contact-val">+91 9309270104</p>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/salome-gulpage" target="_blank" class="contact-item">
+        <span>🔗</span>
+        <div>
+          <p class="contact-label">LinkedIn</p>
+          <p class="contact-val">linkedin.com/in/salome-gulpage</p>
+        </div>
+      </a>
+      <a href="https://github.com/SalomeGulpage" target="_blank" class="contact-item">
+        <span>🐙</span>
+        <div>
+          <p class="contact-label">GitHub</p>
+          <p class="contact-val">github.com/SalomeGulpage</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>Made by Salome Gulpage</p>
+    <p>Designed &amp; Built by Salome Gulpage &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Solapur, India</p>
   </footer>
 
-  <!-- 5. Link JS at the bottom -->
   <script src="script.js"></script>
 </body>
 </html>
